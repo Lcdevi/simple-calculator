@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:auto;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#container {
+  display: grid;
+  border: 1px solid grey;
+  height: 400px;
+  width: 300px;
+  /*grid-template-areas:
+    "display display display display"*/
+}
+
+#display {
+  display: flex;
+  /*grid-area: display;*/
+  align-items: end;
+  justify-content: end;
+  grid-row: 1;
+  grid-column: 1 / 4;
+}
+
+#container button {
+  display: flex;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+}
