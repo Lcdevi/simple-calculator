@@ -19,24 +19,24 @@ let nbrB = 0;
 let nbrA = 0;
 
 twoBtn.addEventListener("click", function(){
-  nbr = 2;
-  console.log(nbr);
+  nbrA = 2;
+  console.log(nbrA);
 })
 
 fourBtn.addEventListener("click", function(){
-  nbr = 4;
-  console.log(nbr);
+  nbrB = 4;
+  console.log(nbrB);
 })
 
 plusBtn.addEventListener("click", function(){
   operator = "+";
-  newNbrA = nbr;
-  newNbrB = nbr;
+  newNbrA = nbrA;
+  newNbrB = nbrB;
   console.log(operator);
 })
 
 egalBtn.addEventListener("click", function(){
-  let sum = add(newNbrA, newNbrB);
+  let sum = newNbrA + newNbrB;
   console.log(sum);
 
 })
