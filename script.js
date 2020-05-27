@@ -3,6 +3,7 @@ let twoBtn = document.getElementById('twobtn');
 let threeBtn = document.getElementById('threebtn');
 let fourBtn = document.getElementById('fourbtn');
 let plusBtn = document.getElementById('plusbtn');
+let minusBtn = document.getElementById('minusbtn');
 let displayjs = document.getElementById('display');
 let egalBtn = document.getElementById('egalbtn');
 
@@ -84,6 +85,45 @@ plusBtn.addEventListener('click', function(e){
     }
 })
 
+
+// ***** - BUTTON *****
+minusBtn.addEventListener('click', function(e){
+  operator = "-";
+  console.log("operateur est : " + operator);
+  displayValue = displayValue + " - " + temporaryResult;
+  console.log("displayValue : " + displayValue);
+
+  array = displayValue.split(" ");
+    console.log(array);
+    let len = array.length;
+    for (i = 0 ; i < len; i++) {
+/*
+      if (array[i] == "+") {
+        temporaryResult = Math.floor(array[0]) + Math.floor(array[2]);
+        displayjs.textContent = temporaryResult;
+        console.log("temporaryResult : " + temporaryResult);
+        console.log("displayValue : " + displayValue);
+      }
+      */
+      if (array[i] == "-") {
+        temporaryResult = Math.floor(array[0]) - Math.floor(array[2]);
+        displayjs.textContent = temporaryResult;
+        console.log("displayValue : " + displayValue);
+      //  temporaryResult = displayValue;
+        displayValue = "";
+        console.log("temporaryResult : " + temporaryResult);
+        console.log("displayValue : " + displayValue);
+
+      }
+      //else {
+        //displayjs.textContent = displayValue;
+        //console.log("displayValue : " + displayValue);
+      //}
+    }
+})
+
+
+
 // ***** = BUTTON *****
 
 egalBtn.addEventListener('click', function(e){
@@ -120,6 +160,38 @@ egalBtn.addEventListener('click', function(e){
           //console.log("displayValue : " + displayValue);
         //}
       }
+    } else if (operator == "-") {
+    displayValue = displayValue + " - " + temporaryResult;
+    console.log("displayValue : " + displayValue);
+
+    array = displayValue.split(" ");
+      console.log(array);
+      let len = array.length;
+      for (i = 0 ; i < len; i++) {
+  /*
+        if (array[i] == "+") {
+          temporaryResult = Math.floor(array[0]) + Math.floor(array[2]);
+          displayjs.textContent = temporaryResult;
+          console.log("temporaryResult : " + temporaryResult);
+          console.log("displayValue : " + displayValue);
+        }
+        */
+        if (array[i] == "-") {
+          temporaryResult = Math.floor(array[2]) - Math.floor(array[0]);
+          displayjs.textContent = temporaryResult;
+          console.log("displayValue : " + displayValue);
+        //  temporaryResult = displayValue;
+          displayValue = "";
+          console.log("temporaryResult : " + temporaryResult);
+          console.log("displayValue : " + displayValue);
+
+        }
+        //else {
+          //displayjs.textContent = displayValue;
+          //console.log("displayValue : " + displayValue);
+        //}
+      }
+
     }
 })
 
