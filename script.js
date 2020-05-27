@@ -105,8 +105,19 @@ minusBtn.addEventListener('click', function(e){
         console.log("displayValue : " + displayValue);
       }
       */
-      if (array[i] == "-") {
+      if (array[2] == "") {
         temporaryResult = Math.floor(array[0]) - Math.floor(array[2]);
+        displayjs.textContent = temporaryResult;
+        console.log("displayValue : " + displayValue);
+      //  temporaryResult = displayValue;
+        displayValue = "";
+        console.log("temporaryResult : " + temporaryResult);
+        console.log("displayValue : " + displayValue);
+
+      }
+
+      else if (array[i] == "-") {
+        temporaryResult = Math.floor(array[2]) - Math.floor(array[0]);
         displayjs.textContent = temporaryResult;
         console.log("displayValue : " + displayValue);
       //  temporaryResult = displayValue;
