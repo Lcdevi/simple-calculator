@@ -17,12 +17,12 @@ button {
 }
 
 #container {
+
   display: grid;
   border: 1px solid grey;
-  height: 400px;
-  width: 300px;
-  /*grid-template-areas:
-    "display display display display"*/
+  height: 500px;
+  width: 350px;
+
 }
 
 #display {
@@ -31,7 +31,7 @@ button {
   align-items: end;
   justify-content: end;
   grid-row: 1;
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
 }
 
 #container button {
@@ -40,4 +40,14 @@ button {
   border-right: 1px solid grey;
   align-items: center;
   justify-content: center;
+}
+
+#egalbtn {
+  grid-row: 5 / 7;
+  grid-column: 4;
+}
+
+#zerobtn {
+  grid-row: 6;
+  grid-column: 1 / 3;
 }
