@@ -77,7 +77,7 @@ minusplusBtn.addEventListener('click', function(e){
     console.log("hop");
     console.log(temporaryResult);
     console.log(displayValue);
-    if (displayValue < 0 || temporaryResult < 0 || (displayValue == "" && temporaryResult == "")) {
+    if ((temporaryResult > 0 && displayValue < 0) || (displayValue == "" && temporaryResult < 0) || (displayValue < 0 && temporaryResult =="") || (displayValue < 0 && temporaryResult < 0) || (displayValue == "" && temporaryResult == "")) {
     minusplusBtn.disabled = true;
   } else if (displayjs.textContent == displayValue){
     displayValue = "-" + displayValue;
